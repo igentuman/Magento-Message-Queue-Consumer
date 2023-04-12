@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+  ~ Author Siarhei Astapchyk
+  ~ igentuman@gmail.com
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Symfony\Component\Console\Command\Command">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="ign_import_data_from_file" xsi:type="object">IGN\MessageQueueConsumer\Command\ImportFromFile</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

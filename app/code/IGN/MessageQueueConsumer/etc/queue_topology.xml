@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!--
+  ~ Author Siarhei Astapchyk
+  ~ igentuman@gmail.com
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/queue_topology.xsd">
+    <exchange name="ign.my_custom_db_consumer" type="topic" connection="db">
+        <binding
+                id="ign_my_custom_db_consumer"
+                topic="ign.my_custom_db_consumer"
+                destinationType="queue"
+                destination="ign_my_custom_db_consumer"
+        />
+    </exchange>
+
+    <!-- RabbitMQ queue example-->
+    <exchange name="ign.my_custom_ampq_consumer" type="topic" connection="ampq">
+        <binding
+                id="ign_my_custom_ampq_consumer"
+                topic="ign.my_custom_ampq_consumer"
+                destinationType="queue"
+                destination="ign_my_custom_ampq_consumer"
+        />
+    </exchange>
+</config>
